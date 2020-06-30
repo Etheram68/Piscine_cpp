@@ -1,0 +1,63 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/30 11:14:47 by frfrey            #+#    #+#             */
+/*   Updated: 2020/06/30 11:14:47 by frfrey           ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <iostream>
+#include "Contact.hpp"
+
+int		Contact::compteur = 0;
+
+Contact::Contact() : first_name(""), last_name(""),
+			nickname(""), login(""), postal_address(""),
+			email(""), address(""), phone_number(""), birthday(""),
+			favorite_meal(""), underwear_color(""),
+			darkest_secret("")
+{
+
+}
+
+Contact::Contact(std::string first_name, std::string last_name, std::string nickname, \
+		std::string login, std::string postal_address, std::string email, \
+		std::string address, std::string phone, std::string birth, \
+		std::string favorite_meal, std::string underwear_color, \
+		std::string darkest_secret) : first_name(first_name), last_name(last_name),
+			nickname(nickname), login(login), postal_address(postal_address),
+			email(email), address(address), phone_number(phone), birthday(birth),
+			favorite_meal(favorite_meal), underwear_color(underwear_color),
+			darkest_secret(darkest_secret)
+		{
+			++compteur;
+		}
+
+int			Contact::numberInstances()
+{
+	return (compteur);
+}
+
+Contact		ft_add_user()
+{
+	std::string		value[12]{
+		"first_name", "last_name", "nickname", "login", "postal_address",
+		"email", "address", "phone_number", "birthday", "favorite_meal",
+		"underwear_color", "darkest_secret"
+	};
+
+	for (int i = 0; i < 12; i++)
+	{
+		std::cout << value[i] << std::endl << "> ";
+		if (i == 0)
+			std::cin.ignore();
+		std::getline(std::cin, value[i]);
+	}
+	Contact		user(value[0], value[1], value[2], value[3], value[4],
+		value[5], value[6], value[7], value[8], value[9], value[10], value[11]);
+	return (user);
+}

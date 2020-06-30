@@ -14,6 +14,8 @@
 # define DIRECTORY_H
 
 # include <iostream>
+# include <string>
+# include "../srcs/add_user/contact.hpp"
 
 void		ft_print_prompt(void);
 

@@ -14,6 +14,5 @@
 
 void		ft_print_prompt(void)
 {
-	std::cout << "< ADD" << std::endl << "< SEARCH" << std::endl \
-		<< "< EXIT" << std::endl << std::endl << "> ";
+	std::cout << "Menu : ADD - SEARCH - EXIT" << std::endl << std::endl << "> ";
 }
