@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 #include "ClassContact.hpp"
 
 int		Contact::compteur = 0;
@@ -53,7 +54,31 @@ void		Contact::print_contact() const
 	std::cout << "Darkest secret: " << darkest_secret << std::endl;
 }
 
+void		Contact::print_list(int index) const
+{
+	std::cout << std::setfill(' ') << std::setw(10);
+	std::cout << index + 1 << "|";
+	std::cout << std::setfill(' ') << std::setw(10);
+	std::cout << first_name << "|";
+	std::cout << std::setfill(' ') << std::setw(10);
+	std::cout << last_name << "|";
+	std::cout << std::setfill(' ') << std::setw(10);
+	std::cout << nickname << "|" << std::endl;
+}
+
 int			Contact::numberInstances()
 {
 	return (compteur);
+}
+
+bool		Contact::is_empty() const
+{
+	if (first_name.empty())
+		return true;
+	else if (last_name.empty())
+		return true;
+	else if (nickname.empty())
+		return true;
+	else
+		return false;
 }

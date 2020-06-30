@@ -20,13 +20,20 @@ Contact		ft_add_user()
 		"email", "address", "phone_number", "birthday", "favorite_meal",
 		"underwear_color", "darkest_secret"
 	};
+	std::string		save("");
 
-	for (int i = 0; i < 12; i++)
+	for (int i = 0; i < 12;)
 	{
+		save = value[i];
 		std::cout << value[i] << std::endl << "> ";
-		if (i == 0)
-			std::cin.ignore();
 		std::getline(std::cin, value[i]);
+		if ((i >= 0 && i <= 2) && value[i].empty())
+		{
+			std::cout << "Error field " << save << " is empty" << std::endl;
+			value[i] = save;
+		}
+		else
+			i++;
 	}
 	Contact		user(value[0], value[1], value[2], value[3], value[4],
 		value[5], value[6], value[7], value[8], value[9], value[10], value[11]);

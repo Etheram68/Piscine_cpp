@@ -26,6 +26,8 @@ class Contact
 		std::string favorite_meal, std::string underwear_color,
 		std::string darkest_secret);
 	void			print_contact() const;
+	void			print_list(int index) const;
+	bool			is_empty() const;
 	static int		numberInstances();
 
 	private:
