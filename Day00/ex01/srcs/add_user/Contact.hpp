@@ -45,6 +45,4 @@ class Contact
 	static int		compteur;
 };
 
-Contact			ft_add_user(void);
-
 #endif

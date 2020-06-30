@@ -22,17 +22,17 @@ int		main()
 	{
 		i = Contact::numberInstances();
 		ft_print_prompt();
-		std::cin >> command;
+		std::getline(std::cin, command);
 		std::cout << std::endl;
 		if (command == "ADD")
 		{
 			if (i < 8)
 				instance[i] = ft_add_user();
 			else
-				std::cout << "Your Directory is Full" << std::endl;
+				std::cout << "Your PhoneBook is Full" << std::endl << std::endl;
 		}
 		else if (command == "SEARCH")
-			;//ft_search_user();
+			ft_search_user(instance);
 		else if (command != "EXIT")
 			system("clear");
 	} while (command != "EXIT");
