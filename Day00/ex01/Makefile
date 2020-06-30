@@ -16,11 +16,11 @@ SRCS_UTILS				= $(addprefix utils/, utils.cpp)
 
 SRC_PATH				= srcs/
 
-SRC_NAME				= main.c $(SRCS_UTILS)
+SRC_NAME				= main.cpp $(SRCS_UTILS)
 
 SRCS					= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
-OBJ_NAME				= $(SRC_NAME:.c=.o)
+OBJ_NAME				= $(SRC_NAME:.cpp=.o)
 
 OBJ_PATH				= obj/
 
@@ -48,7 +48,7 @@ $(OBJ_PATH):
 	@mkdir -p obj/ 2> /dev/null
 	@mkdir -p obj/utils 2> /dev/null
 
-$(OBJ_PATH)%.o: $(SRC_PATH)%.c $(HEADER)/directory.h
+$(OBJ_PATH)%.o: $(SRC_PATH)%.cpp $(HEADER)/directory.h
 	@printf "\033[2K\r\033[0;32m[Compiling] : \t\033[0;32m\033[0m$<"
 	@clang++ $(FLAG) -I $(HEADER) -c $< -o $@
 
