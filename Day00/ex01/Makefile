@@ -30,7 +30,7 @@ OBJ_PATH				= obj/
 
 OBJ						= $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
-NAME					= directory
+NAME					= PhoneBook
 
 RM						= rm -rf
 
@@ -46,7 +46,7 @@ all: $(OBJ_PATH) $(NAME) $(HEADER)
 
 $(NAME): $(OBJ)
 	@clang++ $(FLAG) $(OBJ) -o $(NAME)
-	@printf "\33[2K\r \033[0m\033[0;33mDirectory: \t\033[0;38;5;121mUpdated\n\033[0m"
+	@printf "\33[2K\r \033[0m\033[0;33mPhoneBook: \t\033[0;38;5;121mUpdated\n\033[0m"
 
 $(OBJ_PATH):
 	@mkdir -p obj/ 2> /dev/null
@@ -58,21 +58,21 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp $(HEADER)/directory.h
 	@clang++ $(FLAG) -I $(HEADER) -c $< -o $@
 
 clean:
-	@printf "\033[2K\r\033[31mDeleting Directory srcs/	\033[37m"
+	@printf "\033[2K\r\033[31mDeleting PhoneBook srcs/	\033[37m"
 	@sleep 0.1
-	@printf "\033[2K\r\033[31mDeleting Directory srcs/.	\033[37m"
+	@printf "\033[2K\r\033[31mDeleting PhoneBook srcs/.	\033[37m"
 	@sleep 0.1
-	@printf "\033[2K\r\033[31mDeleting Directory srcs/..	\033[37m"
+	@printf "\033[2K\r\033[31mDeleting PhoneBook srcs/..	\033[37m"
 	@sleep 0.1
-	@printf "\033[2K\r\033[31mDeleting Directory srcs/...	\033[37m"
+	@printf "\033[2K\r\033[31mDeleting PhoneBook srcs/...	\033[37m"
 	@sleep 0.1
-	@printf "\033[2K\r\033[31mDeleting Directory srcs/	\033[37m"
+	@printf "\033[2K\r\033[31mDeleting PhoneBook srcs/	\033[37m"
 	@sleep 0.1
-	@printf "\033[2K\r\033[31mDeleting Directory srcs/.	\033[37m"
+	@printf "\033[2K\r\033[31mDeleting PhoneBook srcs/.	\033[37m"
 	@sleep 0.1
-	@printf "\033[2K\r\033[31mDeleting Directory srcs/..	\033[37m"
+	@printf "\033[2K\r\033[31mDeleting PhoneBook srcs/..	\033[37m"
 	@sleep 0.1
-	@printf "\033[2K\r\033[31mDeleting Directory srcs/...	\033[37m"
+	@printf "\033[2K\r\033[31mDeleting PhoneBook srcs/...	\033[37m"
 	@sleep 0.1
 	@${RM} ${OBJ_PATH}
 	@printf "\33[2K\r \033[0;32m[OK] \033[0m \033[36m Deleted successfully!\n\033[0m"
