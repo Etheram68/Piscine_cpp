@@ -54,16 +54,37 @@ void		Contact::print_contact() const
 	std::cout << "Darkest secret: " << darkest_secret << std::endl;
 }
 
+std::string		Contact::tronc_word(std::string word) const
+{
+	std::string		tmp("");
+	int				len(0);
+	tmp = word;
+	len = tmp.length();
+	tmp.erase(9, len);
+	tmp += '.';
+	return (tmp);
+}
+
 void		Contact::print_list(int index) const
 {
 	std::cout << std::setfill(' ') << std::setw(10);
 	std::cout << index + 1 << "|";
 	std::cout << std::setfill(' ') << std::setw(10);
-	std::cout << first_name << "|";
+	if (first_name.size() > 10)
+		std::cout << tronc_word(first_name) << '|';
+	else
+		std::cout << first_name << "|";
 	std::cout << std::setfill(' ') << std::setw(10);
-	std::cout << last_name << "|";
+	if (last_name.size() > 10)
+		std::cout << tronc_word(last_name) << '|';
+	else
+		std::cout << last_name << "|";
 	std::cout << std::setfill(' ') << std::setw(10);
-	std::cout << nickname << "|" << std::endl;
+	if (nickname.size() > 10)
+		std::cout << tronc_word(nickname) << '|';
+	else
+		std::cout << nickname << "|";
+	std::cout << std::endl;
 }
 
 int			Contact::numberInstances()

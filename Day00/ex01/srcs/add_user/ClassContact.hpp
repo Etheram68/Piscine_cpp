@@ -27,6 +27,7 @@ class Contact
 		std::string darkest_secret);
 	void			print_contact() const;
 	void			print_list(int index) const;
+	std::string		tronc_word(std::string word) const;
 	bool			is_empty() const;
 	static int		numberInstances();
 

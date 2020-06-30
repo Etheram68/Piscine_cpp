@@ -33,8 +33,6 @@ int		main()
 		}
 		else if (command == "SEARCH")
 			ft_search_user(instance);
-		else if (command != "EXIT")
-			system("clear");
 	} while (command != "EXIT");
 	return (EXIT_SUCCESS);
 }
