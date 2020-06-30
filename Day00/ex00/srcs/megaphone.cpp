@@ -19,6 +19,7 @@ class Upper_String{
 		std::string operator()(std::string const& str)
 		{
 			std::string	tmp(str);
+			
 			for(int y = 0; str[y]; y++)
 				tmp[y] = toupper((int)str[y]);
 			return tmp;
