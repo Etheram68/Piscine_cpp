@@ -15,5 +15,5 @@
 void		ft_print_prompt(void)
 {
 	std::cout << "< ADD" << std::endl << "< SEARCH" << std::endl \
-		<< "< EXIT" << std::endl;
+		<< "< EXIT" << std::endl << std::endl << "> ";
 }
