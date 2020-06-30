@@ -12,6 +12,7 @@
 
 #include <iostream>
 #include <iomanip>
+#include <string>
 #include "../add_user/ClassContact.hpp"
 
 void		ft_print_list(Contact instance[8])
@@ -33,12 +34,26 @@ void		ft_print_list(Contact instance[8])
 			instance[i].print_list(i);
 		i++;
 	}
-	std::cout << std::endl;
+	std::cout << std::endl << std::endl;
 }
 
 void		ft_search_user(Contact instance[8])
 {
 	std::string		command("");
+	int				index(0);
 
 	ft_print_list(instance);
+	if (Contact::numberInstances() > 0)
+	{
+		std::cout << "Enter the contact index to display" << std::endl << "> ";
+		std::getline(std::cin, command);
+		index = std::stoi(command);
+		if (index - 1 < Contact::numberInstances())
+			instance[index - 1].print_contact();
+		else
+			std::cout << "Error: This contact does not exist";
+	}
+	else
+		std::cout << "No contact";
+	std::cout << std::endl << std::endl;
 }
