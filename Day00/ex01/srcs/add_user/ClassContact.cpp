@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Contact.hpp"
+#include "ClassContact.hpp"
 
 int		Contact::compteur = 0;
 

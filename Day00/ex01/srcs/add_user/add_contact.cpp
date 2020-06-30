@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Contact.hpp"
+#include "ClassContact.hpp"
 
 Contact		ft_add_user()
 {

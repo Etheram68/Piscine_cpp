@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <string>
-# include "../srcs/add_user/contact.hpp"
+# include "../srcs/add_user/ClassContact.hpp"
 
 void			ft_print_prompt(void);
 Contact			ft_add_user(void);

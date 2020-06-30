@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../add_user/Contact.hpp"
+#include "../add_user/ClassContact.hpp"
 
 void		ft_search_user(Contact instance[8])
 {

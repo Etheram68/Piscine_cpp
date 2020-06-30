@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.hpp                                        :+:      :+:    :+:   */
+/*   ClassContact.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/30 12:23:15 by frfrey            #+#    #+#             */
-/*   Updated: 2020/06/30 12:23:15 by frfrey           ###   ########lyon.fr   */
+/*   Created: 2020/06/30 14:45:53 by frfrey            #+#    #+#             */
+/*   Updated: 2020/06/30 14:45:53 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_HPP
-# define CONTACT_HPP
+#ifndef CLASSCONTACT_HPP
+# define CLASSCONTACT_HPP
 
 # include <string>
 

@@ -14,7 +14,7 @@ HEADER					= includes/
 
 SRCS_UTILS				= $(addprefix utils/, utils.cpp)
 
-SRCS_ADD				= $(addprefix add_user/, Contact.cpp add_contact.cpp)
+SRCS_ADD				= $(addprefix add_user/, ClassContact.cpp add_contact.cpp)
 
 SRCS_SEARCH				= $(addprefix search_user/, search_contact.cpp)
 
