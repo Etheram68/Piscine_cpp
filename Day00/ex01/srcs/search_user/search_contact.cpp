@@ -47,11 +47,16 @@ void		ft_search_user(Contact instance[8])
 	{
 		std::cout << "Enter the contact index to display" << std::endl << "> ";
 		std::getline(std::cin, command);
-		index = std::stoi(command);
-		if (index - 1 < Contact::numberInstances())
-			instance[index - 1].print_contact();
+		if (command[0] >= '0' && command[0] <= '9')
+		{
+			index = std::stoi(command);
+			if (index - 1 < Contact::numberInstances())
+				instance[index - 1].print_contact();
+			else
+				std::cout << "Error: This contact does not exist";
+		}
 		else
-			std::cout << "Error: This contact does not exist";
+			std::cout << "Error: This is not a number";
 	}
 	else
 		std::cout << "No contact";
