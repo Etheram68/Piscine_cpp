@@ -14,9 +14,13 @@ HEADER					= includes/
 
 SRCS_UTILS				= $(addprefix utils/, utils.cpp)
 
+SRCS_ADD				= $(addprefix add_user/, Contact.cpp)
+
+SRCS_SEARCH				= $(addprefix search_user/, utils.cpp)
+
 SRC_PATH				= srcs/
 
-SRC_NAME				= main.cpp $(SRCS_UTILS)
+SRC_NAME				= main.cpp $(SRCS_UTILS) $(SRCS_ADD)
 
 SRCS					= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
@@ -47,6 +51,7 @@ $(NAME): $(OBJ)
 $(OBJ_PATH):
 	@mkdir -p obj/ 2> /dev/null
 	@mkdir -p obj/utils 2> /dev/null
+	@mkdir -p obj/add_user 2> /dev/null
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.cpp $(HEADER)/directory.h
 	@printf "\033[2K\r\033[0;32m[Compiling] : \t\033[0;32m\033[0m$<"
