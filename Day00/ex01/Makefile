@@ -10,29 +10,29 @@
 #                                                                              #
 # **************************************************************************** #
 
-HEADER			= includes/
+HEADER					= includes/
 
-SRCS_UTILS		= $(addprefix utils/, utils.cpp)
+SRCS_UTILS				= $(addprefix utils/, utils.cpp)
 
-SRC_PATH		= srcs/
+SRC_PATH				= srcs/
 
-SRCS_NAME		= main.cpp $(SRCS_UTILS)
+SRC_NAME				= main.c $(SRCS_UTILS)
 
-SRC				= $(addprefix $(SRC_PATH), $(SRCS_NAME))
+SRCS					= $(addprefix $(SRC_PATH), $(SRC_NAME))
 
-OBJ_PATH 		= obj/
+OBJ_NAME				= $(SRC_NAME:.c=.o)
 
-OBJ_NAME 		= $(SRCS_NAME:.c=.o)
+OBJ_PATH				= obj/
 
-OBJ 			= $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+OBJ						= $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 
-NAME			= directory
+NAME					= directory
 
-RM				= rm -rf
+RM						= rm -rf
 
-FLAG			= -Wall -Wextra -Werror -O3
+FLAG					= -Wall -Wextra -Werror -O3
 
-#FLAGS			= -g3 -fsanitize=address
+#FLAGS					= -g3 -fsanitize=address
 
 # **************************************************************************** #
 #								REGLES									       #
