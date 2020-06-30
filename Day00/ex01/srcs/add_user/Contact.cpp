@@ -37,6 +37,22 @@ Contact::Contact(std::string first_name, std::string last_name, std::string nick
 			++compteur;
 		}
 
+void		Contact::print_contact() const
+{
+	std::cout << "First Name: " << first_name << std::endl;
+	std::cout << "Last Name: " << last_name << std::endl;
+	std::cout << "Nickname: " << nickname << std::endl;
+	std::cout << "Login: " << login << std::endl;
+	std::cout << "Postal Address: " << postal_address << std::endl;
+	std::cout << "Email: " << email << std::endl;
+	std::cout << "Address: " << address << std::endl;
+	std::cout << "Phone Number: " << phone_number << std::endl;
+	std::cout << "Birthday: " << birthday << std::endl;
+	std::cout << "Favorite meal: " << favorite_meal << std::endl;
+	std::cout << "Underwear Color: " << underwear_color << std::endl;
+	std::cout << "Darkest secret: " << darkest_secret << std::endl;
+}
+
 int			Contact::numberInstances()
 {
 	return (compteur);
