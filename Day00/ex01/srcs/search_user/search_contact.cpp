@@ -13,6 +13,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <cctype>
 #include "../add_user/ClassContact.hpp"
 
 void		ft_print_list(Contact instance[8])
@@ -47,7 +48,7 @@ void		ft_search_user(Contact instance[8])
 	{
 		std::cout << "Enter the contact index to display" << std::endl << "> ";
 		std::getline(std::cin, command);
-		if (command[0] >= '0' && command[0] <= '9')
+		if (isdigit(command[0]))
 		{
 			index = std::stoi(command);
 			if (index - 1 < Contact::numberInstances())
