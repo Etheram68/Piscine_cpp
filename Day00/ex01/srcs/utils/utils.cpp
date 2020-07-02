@@ -12,7 +12,7 @@
 
 #include "directory.h"
 
-void		ft_print_prompt(void)
+void		ft_print_prompt( void )
 {
 	std::cout << "Menu : ADD - SEARCH - EXIT" << std::endl << std::endl << "> ";
 }

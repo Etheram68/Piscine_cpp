@@ -16,7 +16,7 @@
 #include <cctype>
 #include "../add_user/ClassContact.hpp"
 
-void		ft_print_list(Contact instance[8])
+void		ft_print_list( Contact instance[8] )
 {
 	int		i(0), nb(0);
 
@@ -38,7 +38,7 @@ void		ft_print_list(Contact instance[8])
 	std::cout << std::endl << std::endl;
 }
 
-void		ft_search_user(Contact instance[8])
+void		ft_search_user( Contact instance[8] )
 {
 	std::string		command("");
 	int				index(0);

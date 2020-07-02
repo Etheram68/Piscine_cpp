@@ -34,11 +34,16 @@ Contact::Contact(std::string first_name, std::string last_name, std::string nick
 			email(email), address(address), phone_number(phone), birthday(birth),
 			favorite_meal(favorite_meal), underwear_color(underwear_color),
 			darkest_secret(darkest_secret)
-		{
-			++compteur;
-		}
+{
+	++compteur;
+}
 
-void		Contact::print_contact() const
+Contact::~Contact( void )
+{
+	--compteur;
+}
+
+void		Contact::print_contact( void ) const
 {
 	std::cout << "First Name: " << first_name << std::endl;
 	std::cout << "Last Name: " << last_name << std::endl;
@@ -54,7 +59,7 @@ void		Contact::print_contact() const
 	std::cout << "Darkest secret: " << darkest_secret << std::endl;
 }
 
-std::string		Contact::tronc_word(std::string word) const
+std::string		Contact::tronc_word( std::string word ) const
 {
 	std::string		tmp("");
 	int				len(0);
@@ -65,7 +70,7 @@ std::string		Contact::tronc_word(std::string word) const
 	return (tmp);
 }
 
-void		Contact::print_list(int index) const
+void		Contact::print_list( int index ) const
 {
 	std::cout << std::setfill(' ') << std::setw(10);
 	std::cout << index + 1 << "|";
@@ -87,12 +92,12 @@ void		Contact::print_list(int index) const
 	std::cout << std::endl;
 }
 
-int			Contact::numberInstances()
+int			Contact::numberInstances( void )
 {
 	return (compteur);
 }
 
-bool		Contact::is_empty() const
+bool		Contact::is_empty( void ) const
 {
 	if (first_name.empty())
 		return true;

@@ -25,11 +25,12 @@ class Contact
 		std::string address, std::string phone, std::string birth,
 		std::string favorite_meal, std::string underwear_color,
 		std::string darkest_secret);
-	void			print_contact() const;
-	void			print_list(int index) const;
-	std::string		tronc_word(std::string word) const;
-	bool			is_empty() const;
-	static int		numberInstances();
+	~Contact();
+	void			print_contact( void ) const;
+	void			print_list( int index ) const;
+	std::string		tronc_word( std::string word ) const;
+	bool			is_empty( void ) const;
+	static int		numberInstances( void );
 
 	private:
 

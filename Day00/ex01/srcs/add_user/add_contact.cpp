@@ -13,7 +13,7 @@
 #include <iostream>
 #include "ClassContact.hpp"
 
-Contact		ft_add_user()
+Contact		ft_add_user( void )
 {
 	std::string		value[12]{
 		"first_name", "last_name", "nickname", "login", "postal_address",
