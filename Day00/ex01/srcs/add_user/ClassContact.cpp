@@ -38,11 +38,6 @@ Contact::Contact(std::string first_name, std::string last_name, std::string nick
 	++compteur;
 }
 
-Contact::~Contact( void )
-{
-	--compteur;
-}
-
 void		Contact::print_contact( void ) const
 {
 	std::cout << "First Name: " << first_name << std::endl;
