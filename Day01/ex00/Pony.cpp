@@ -14,24 +14,24 @@
 #include <iostream>
 
 Pony::Pony(std::string name, std::string breed, int price) :
-	name(name), breed(breed), price(price), free(true)
+	_name(name), _breed(breed), _price(price), _free(true)
 {
 	std::cout << name << " is born !!" << std::endl;
 }
 
 Pony::~Pony()
 {
-	std::cout << name << " is dead !!" << std::endl;
+	std::cout << _name << " is dead !!" << std::endl;
 }
 
 void		Pony::describe( void ) const
 {
-	std::cout << "This name is " << name << std::endl \
-		<< "This breed is " << breed << std::endl \
-		<< "Its price is " << price << std::endl;
+	std::cout << "This name is " << _name << std::endl \
+		<< "This breed is " << _breed << std::endl \
+		<< "Its price is " << _price << std::endl;
 }
 
 bool		Pony::isFree( void ) const
 {
-	return free;
+	return _free;
 }

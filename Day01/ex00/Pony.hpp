@@ -26,10 +26,10 @@ class Pony
 
 	private:
 
-	std::string		name;
-	std::string		breed;
-	int				price;
-	bool			free;
+	std::string		_name;
+	std::string		_breed;
+	int				_price;
+	bool			_free;
 };
 
 #endif
