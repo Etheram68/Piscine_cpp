@@ -49,9 +49,7 @@ void			ft_readfile( std::ifstream& file, char *av[])
 	while (getline(file, buffer))
 	{
 		while ((found = buffer.find(s1, found + 1)) != std::string::npos)
-		{
 			buffer.replace(found, s1.size(), s2.c_str());
-		}
 		tmp += buffer;
 		tmp += '\n';
 	}
