@@ -31,7 +31,7 @@ void			ft_change_occurence( std::string const & buf, char *av[] )
 			<< std::endl;
 }
 
-void			ft_readfile( std::ifstream& file, char *av[])
+void			ft_readfile( std::ifstream& file, char *av[] )
 {
 	std::string		s1(av[2]);
 	std::string		s2(av[3]);
