@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 22:46:09 by frfrey            #+#    #+#             */
-/*   Updated: 2020/07/24 14:31:36 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/07/24 16:03:17 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Fixed
 
 	private:
 		int					_nbrFixed;
-		static int const	nbrBits;
+		static int const	_nbrBits;
 };
 
 std::ostream &		operator<<( std::ostream & o, Fixed const & i );
