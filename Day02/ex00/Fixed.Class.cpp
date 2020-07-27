@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 22:46:12 by frfrey            #+#    #+#             */
-/*   Updated: 2020/07/27 10:55:52 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/07/27 10:58:30 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,6 @@ int					Fixed::getRawBits( void ) const
 
 void				Fixed::setRawBits( int const raw )
 {
-
 	this->_nbrFixed = raw;
 }
 
