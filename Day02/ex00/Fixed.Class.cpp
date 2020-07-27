@@ -6,13 +6,13 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 22:46:12 by frfrey            #+#    #+#             */
-/*   Updated: 2020/07/27 10:58:30 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/07/27 11:03:18 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.Class.hpp"
 
-int const		_nbrBits = 8;
+int const		Fixed::_nbrBits = 8;
 
 Fixed::Fixed() : _nbrFixed(0)
 {
