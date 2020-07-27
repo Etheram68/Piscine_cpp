@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 22:46:12 by frfrey            #+#    #+#             */
-/*   Updated: 2020/07/24 16:03:13 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/07/27 10:55:52 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Fixed::~Fixed()
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed &		Fixed::operator=( Fixed const & rhs )
+Fixed &				Fixed::operator=( Fixed const & rhs )
 {
 	std::cout << "Assignation operator called" << std::endl;
 	if ( this != &rhs )
@@ -44,13 +44,13 @@ std::ostream &		operator<<( std::ostream & o, Fixed const & i )
 	return o;
 }
 
-int			Fixed::getRawBits( void ) const
+int					Fixed::getRawBits( void ) const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return this->_nbrFixed;
 }
 
-void		Fixed::setRawBits( int const raw )
+void				Fixed::setRawBits( int const raw )
 {
 
 	this->_nbrFixed = raw;
