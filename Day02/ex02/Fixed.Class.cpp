@@ -6,14 +6,14 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/27 10:45:59 by frfrey            #+#    #+#             */
-/*   Updated: 2020/07/27 17:39:13 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/07/27 21:39:43 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <cmath>
 #include "Fixed.Class.hpp"
 
-int const			Fixed::_nbrBits = 8;
+int const			Fixed::_nbrBits = 1;
 
 Fixed &				Fixed::min( Fixed & lhs, Fixed & rhs )
 {
