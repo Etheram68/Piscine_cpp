@@ -16,7 +16,7 @@
 
 int				main()
 {
-	FragTrap	slave("ClapTrap");
+	FragTrap	slave("FragTrap");
 
 	srand(time(0));
 	while (slave.getNbHit() > 0)
