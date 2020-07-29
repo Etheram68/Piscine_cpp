@@ -27,7 +27,7 @@ int				main()
 		if (slave.getNbEnergy() < rand() % (100 - 1 + 1) + 1)
 			slave.setNbEnergy( rand() % (100 - 1 + 1) + 1 );
 		slave.vaulthunter_dot_exe("Jack");
-		slave.takeDamage(rand() % (60 - 1 + 1) + 1);
+		slave.takeDamage(rand() % (100 - 1 + 1) + 1);
 	}
 	std::cout << std::endl << slave << std::endl ;
 	return EXIT_SUCCESS;
