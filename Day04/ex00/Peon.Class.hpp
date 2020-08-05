@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/03 16:51:29 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/03 17:01:13 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/05 14:40:46 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Peon : public Victim
 
 		Peon( std:: string name );
 		Peon( Peon const & src );
-		~Peon();
+		virtual ~Peon();
 
 		virtual void		getPolymorphed( void ) const;
 

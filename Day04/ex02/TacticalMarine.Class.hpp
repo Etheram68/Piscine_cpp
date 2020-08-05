@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/04 14:30:42 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/04 16:10:12 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/05 14:42:13 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class TacticalMarine : public ISpaceMarine
 
 		TacticalMarine();
 		TacticalMarine( TacticalMarine const & src );
-		~TacticalMarine();
+		virtual ~TacticalMarine();
 
 		virtual void				battleCry( void ) const;
 		virtual void				rangedAttack( void ) const;

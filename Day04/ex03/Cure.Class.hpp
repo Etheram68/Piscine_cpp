@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 10:29:46 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/05 10:52:51 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/05 14:42:51 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cure : public AMateria
 
 		Cure();
 		Cure( Cure const & src );
-		~Cure();
+		virtual ~Cure();
 
 		Cure &		operator=( Cure const & rhs );
 

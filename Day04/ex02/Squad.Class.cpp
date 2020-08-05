@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/04 14:18:17 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/04 17:00:55 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/05 15:41:16 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Squad::Squad() : _count(0), _squad(NULL)
 Squad::Squad( const Squad & src )
 {
 	for (int i = 0; i < src.getCount(); i++)
-		push(src.getUnit(i));
+		push(src.getUnit(i)->clone());
 	_count = src._count;
 }
 
@@ -54,6 +54,28 @@ Squad::~Squad()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
+Squad &				Squad::operator=( Squad const & rhs )
+{
+	t_container		*tmp;
+	
+	if ( this != &rhs )
+	{
+		if (_squad)
+		{
+			while (_squad)
+			{
+				delete _squad->unit;
+				tmp = _squad;
+				_squad = _squad->next;
+				delete tmp;
+			}
+		}
+		for (int i = 0; i < rhs.getCount(); i++)
+			push(rhs.getUnit(i)->clone());
+		this->_count = rhs._count;
+	}
+	return *this;
+}
 
 /*
 ** --------------------------------- METHODS ----------------------------------

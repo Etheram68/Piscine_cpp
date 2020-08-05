@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/04 14:18:18 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/04 16:46:39 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/05 15:35:19 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class Squad : public ISquad
 		Squad();
 		Squad( Squad const & src );
 		virtual ~Squad();
+
+		Squad &			operator=( Squad const & rhs );
 
 		virtual int				getCount( void ) const;
 		virtual int				push( ISpaceMarine* marine );

@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/04 16:08:28 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/04 16:10:01 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/05 14:42:04 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class AssaultTerminator : public ISpaceMarine
 
 		AssaultTerminator();
 		AssaultTerminator( AssaultTerminator const & src );
-		~AssaultTerminator();
+		virtual ~AssaultTerminator();
 
 		virtual void				battleCry( void ) const;
 		virtual void				rangedAttack( void ) const;

@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 10:29:39 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/05 10:44:10 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/05 14:42:55 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Ice : public AMateria
 
 		Ice();
 		Ice( Ice const & src );
-		~Ice();
+		virtual ~Ice();
 
 		Ice &					operator=( Ice const & rhs );
 
