@@ -14,6 +14,7 @@
 #include "RadScorpion.Class.hpp"
 #include "PlasmaRifle.Class.hpp"
 #include "PowerFist.Class.hpp"
+#include "SuperMutant.Class.hpp"
 
 
 int main()
@@ -40,5 +41,30 @@ int main()
 	moi->attack(b);
 	std::cout << *moi;
 
+	Enemy* c = new SuperMutant();
+	moi->attack(c);
+	std::cout << *moi;
+	moi->equip(pr);
+	moi->attack(c);
+	std::cout << *moi;
+	moi->attack(c);
+	std::cout << *moi;
+	moi->attack(c);
+	std::cout << *moi;
+	moi->attack(c);
+	std::cout << *moi;
+	moi->recoverAP();
+	moi->attack(c);
+	std::cout << *moi;
+	moi->attack(c);
+	std::cout << *moi;
+	moi->recoverAP();
+	moi->attack(c);
+	std::cout << *moi;
+	moi->attack(c);
+	std::cout << *moi;
+
+	delete pr;
+	delete pf;
 	return EXIT_SUCCESS;
 }

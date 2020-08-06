@@ -21,10 +21,15 @@ int				main()
 	Victim jim("Jimmy");
 	Peon joe("Joe");
 
-	std::cout << robert << jim << joe;
+	Peon jor(joe);
+
+	jor.setName("Jhon");
+
+	std::cout << robert << jim << joe << jor;
 
 	robert.polymorph(jim);
 	robert.polymorph(joe);
+	robert.polymorph(jor);
 
 	return EXIT_SUCCESS;
 }
