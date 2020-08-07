@@ -13,6 +13,8 @@
 #include "Bureaucrat.Class.hpp"
 #include "Form.Class.hpp"
 #include "ShrubberyCreationForm.Class.hpp"
+#include "RobotomyRequestForm.Class.hpp"
+#include "PresidentialPardonForm.Class.hpp"
 
 int					main()
 {
@@ -26,7 +28,7 @@ int					main()
 
 	Form *		form1 = new ShrubberyCreationForm("test");
 
-	std::cout << "* Presentation Shrubbery Form *" << std::endl << form1 << std::endl;
+	std::cout << "* Presentation Shrubbery Form *" << std::endl << *form1 << std::endl;
 
 	character1.signForm(*form1);
 	std::cout << std::endl;
@@ -62,5 +64,84 @@ int					main()
 	}
 
 	delete form1;
+
+	form1 = new RobotomyRequestForm("Charlie");
+
+	std::cout << "* Presentation Robotomy Form *" << std::endl << *form1 << std::endl;
+
+	character1.signForm(*form1);
+	std::cout << std::endl;
+	try
+	{
+		form1->execute(character1);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	character2.signForm(*form1);
+	std::cout << std::endl;
+	character2.signForm(*form1);
+	std::cout << std::endl;
+	try
+	{
+		form1->execute(character1);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	try
+	{
+		form1->execute(Boss);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+
+	delete form1;
+
+	form1 = new PresidentialPardonForm("Edouard");
+
+	std::cout << "* Presentation Pardon Form *" << std::endl << *form1 << std::endl;
+
+	character1.signForm(*form1);
+	std::cout << std::endl;
+	try
+	{
+		form1->execute(character1);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	character2.signForm(*form1);
+	std::cout << std::endl;
+	character2.signForm(*form1);
+	std::cout << std::endl;
+	try
+	{
+		form1->execute(character1);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	try
+	{
+		form1->execute(Boss);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+
+	delete form1;
+
 	return 0;
 }
