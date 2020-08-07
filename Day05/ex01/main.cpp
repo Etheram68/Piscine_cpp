@@ -38,5 +38,5 @@ int					main()
 	Boss.signForm(form142);
 
 
-	return EXIT_SUCCESS;
+	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 15:37:08 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/07 13:49:20 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/07 13:48:49 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,6 +122,29 @@ std::ostream &				operator<<( std::ostream & o, Bureaucrat const & i )
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+
+void						Bureaucrat::signForm( Form & form )
+{
+	if (form.getSigned())
+	{
+		std::cout << this->_name << " cannot sign " << form.getName() \
+			<< " because it is already signed." << std::endl;
+	}
+	else
+	{
+		try
+		{
+			form.beSigned(*this);
+			std::cout << this->_name << " signs " << form.getName() << std::endl;
+		}
+		catch(Form::GradeTooLowException const & e)
+		{
+			std::cout << this->_name << " cant sign " << form.getName() << " because " \
+				<< e.what() << std::endl;
+		}
+	}
+
+}
 
 std::string const &			Bureaucrat::getName( void ) const
 {

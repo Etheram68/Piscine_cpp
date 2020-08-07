@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 15:37:08 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/06 16:39:44 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/07 13:49:33 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,12 @@ class Bureaucrat
 		~Bureaucrat();
 
 		Bureaucrat &				operator=( Bureaucrat const & rhs );
-		void						operator+=( int const rhs );
-		void						operator-=( int const rhs );
-		void						operator++( void );
-		void						operator++( int );
-		void						operator--( void );
-		void						operator--( int );
+		int							operator+=( int const rhs );
+		int							operator-=( int const rhs );
+		int							operator++( void );
+		int							operator++( int );
+		int							operator--( void );
+		int							operator--( int );
 
 		std::string const &			getName( void ) const;
 		int							getGrade( void ) const;

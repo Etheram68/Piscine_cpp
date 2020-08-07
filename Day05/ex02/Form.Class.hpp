@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.Class.hpp                               :+:      :+:    :+:   */
+/*   Form.Class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/06 15:37:08 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/07 13:47:01 by frfrey           ###   ########lyon.fr   */
+/*   Created: 2020/08/07 09:13:39 by frfrey            #+#    #+#             */
+/*   Updated: 2020/08/07 14:06:40 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_CLASS_HPP
-# define BUREAUCRAT_CLASS_HPP
+#ifndef FORM_CLASS_HPP
+# define FORM_CLASS_HPP
 
 # include <iostream>
 # include <string>
 # include <stdexcept>
-# include "Form.Class.hpp"
+# include "Bureaucrat.Class.hpp"
 
-class Form;
+class Bureaucrat;
 
-class Bureaucrat
+class Form
 {
 
 	public:
@@ -42,34 +42,39 @@ class Bureaucrat
 				virtual ~GradeTooLowException() throw();
 
 				virtual const char *	what( void ) const throw();
+
 		};
 
-		Bureaucrat();
-		Bureaucrat( std::string const & name, int grade );
-		Bureaucrat( Bureaucrat const & src );
-		~Bureaucrat();
+		Form( std::string name, int lvSigned, int lvExec);
+		Form( std::string name, int lvSigned, int lvExec, std::string target);
+		Form( Form const & src );
+		virtual ~Form();
 
-		Bureaucrat &				operator=( Bureaucrat const & rhs );
-		int							operator+=( int const rhs );
-		int							operator-=( int const rhs );
-		int							operator++( void );
-		int							operator++( int );
-		int							operator--( void );
-		int							operator--( int );
+		Form &						operator=( Form const & rhs );
 
 		std::string const &			getName( void ) const;
-		int							getGrade( void ) const;
-		void						incGrade( void );
-		void						decGrade( void );
-		void						signForm( Form & form );
+		std::string const &			getTarget( void ) const;
+		int							getGrdSign( void ) const;
+		int							getGrdExec( void ) const;
+		bool						getSigned( void ) const;
+		void						beSigned( Bureaucrat & target );
+		void						execute ( Bureaucrat const & executor ) const;
+
+	protected:
+
+		std::string const			_name;
+		std::string					_target;
+		bool						_signed;
+		int const					_gradeSigned;
+		int	const					_gradeExec;
 
 	private:
 
-		std::string	const			_name;
-		int							_grade;
+		Form();
+		virtual void				action( void ) const = 0;
 
 };
 
-std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i );
+std::ostream &						operator<<( std::ostream & o, Form const & i );
 
-#endif /* ************************************************ BUREAUCRAT_CLASS_H */
+#endif /* ****************************************************** FORM_CLASS_H */
