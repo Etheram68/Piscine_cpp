@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 15:37:08 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/07 13:48:49 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/07 15:47:51 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,56 +61,52 @@ Bureaucrat &				Bureaucrat::operator=( Bureaucrat const & rhs )
 	return *this;
 }
 
-int							Bureaucrat::operator+=( int const rhs )
+void						Bureaucrat::operator+=( int const rhs )
 {
 	if (_grade - rhs < 1)
 		throw Bureaucrat::GradeTooHighException();
 	_grade -= rhs;
-	return _grade;
 }
 
-int							Bureaucrat::operator-=( int const rhs )
+void						Bureaucrat::operator-=( int const rhs )
 {
 	if (_grade + rhs > 150)
 		throw Bureaucrat::GradeTooLowException();
 	_grade += rhs;
-	return _grade;
+
 }
 
-int							Bureaucrat::operator++( void )
+void						Bureaucrat::operator++( void )
 {
 	if (_grade - 1 < 1)
 		throw Bureaucrat::GradeTooHighException();
 	_grade -= 1;
-	return _grade;
+
 }
 
-int							Bureaucrat::operator++( int )
+void						Bureaucrat::operator++( int )
 {
 	Bureaucrat tmp(*this);
 
 	if (_grade - 1 < 1)
 		throw Bureaucrat::GradeTooHighException();
 	_grade -= 1;
-	return tmp._grade;
 }
 
-int							Bureaucrat::operator--( void )
+void						Bureaucrat::operator--( void )
 {
 	if (_grade + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	_grade += 1;
-	return _grade;
 }
 
-int							Bureaucrat::operator--( int )
+void						Bureaucrat::operator--( int )
 {
 	Bureaucrat	tmp(*this);
 
 	if (_grade + 1 > 150)
 		throw Bureaucrat::GradeTooLowException();
 	_grade += 1;
-	return tmp._grade;
 }
 
 std::ostream &				operator<<( std::ostream & o, Bureaucrat const & i )
