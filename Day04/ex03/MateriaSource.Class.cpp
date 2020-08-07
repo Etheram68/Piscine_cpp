@@ -6,7 +6,7 @@
 /*   By: frfrey <frfrey@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 11:49:01 by frfrey            #+#    #+#             */
-/*   Updated: 2020/08/05 12:03:35 by frfrey           ###   ########lyon.fr   */
+/*   Updated: 2020/08/07 11:38:18 by frfrey           ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 */
 
 MateriaSource::MateriaSource() :
-	_inv{NULL}, _i(0)
+	_inv{NULL, NULL, NULL, NULL}, _i(0)
 {
 
 }
