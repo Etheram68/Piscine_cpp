@@ -38,20 +38,6 @@ T const &		max(T const & lhs, T const & rhs)
 	return (lhs > rhs) ? lhs : rhs;
 }
 
-template <>
-std::string const &
-	min<std::string>(std::string const & lhs, std::string const & rhs)
-{
-	return (lhs.size() < rhs.size()) ? lhs : rhs;
-}
-
-template <>
-std::string const &
-	max<std::string>(std::string const & lhs, std::string const & rhs)
-{
-	return (lhs.size() > rhs.size()) ? lhs : rhs;
-}
-
 int			main()
 {
 	int		a(42), b(42), c(10);
@@ -71,7 +57,7 @@ int			main()
 	std::cout << "Max: " << ::max(10.50, 10.54) << " " << ::max(8700, 5)
 		<< std::endl;
 
-	std::string		d("souris"), e("test");
+	std::string		d("chaine1"), e("chaine2");
 
 	std::cout << "Min: " << ::min(d, e) << std::endl;
 	std::cout << "Max: " << ::max(d, e) << std::endl;
